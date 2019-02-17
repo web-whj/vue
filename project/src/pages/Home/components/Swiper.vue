@@ -19,13 +19,13 @@
 
 <script>
 export default {
-
   name: 'HelloSwiper',
   data() {
     return {
       swiperOption: {
         pagination:'.swiper-pagination'
       }
+
     }
   }
 }
