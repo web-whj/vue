@@ -12,6 +12,7 @@
                 </div>
             </swiper-slide>
         </swiper>
+        <div class="swiper-pagination"  slot="pagination"></div>
     </div>
 </template>
 
@@ -21,6 +22,8 @@
     data(){
       return{
         swiperOption: {
+          pagination:'.swiper-pagination',
+          autoplay:false,
         },
         iconsList:[
           {
@@ -98,8 +101,16 @@
 
 <style lang="scss" scoped>
 @import "~css/varibles.scss";
+.icon /deep/.swiper-pagination{
+    bottom:0;
+    width: 100%;
+}
+.icon /deep/.swiper-pagination-bullet-active{
+    background: $bgClock;
+    margin: 0 5px;
+}
 .icon{
-    overflow: hidden;
+    position: relative;
     padding-top: .1rem;
     height: 3.7rem;
     .icons{
