@@ -13,8 +13,8 @@
             </div>
         </div>
         <ul class="list">
-            <li v-for="item of hotList" :key="item.id">
-                <a :href="item.hotUrl">
+            <li v-for="item of loveList" :key="item.id">
+                <a href="">
                     <div class="hotimg">
                         <img :src="item.imgUrl" alt="">
                     </div>
@@ -40,105 +40,19 @@
                 </a>
             </li>
         </ul>
+        <div class="more">
+            <a href="">
+                查看所有产品
+            </a>
+        </div>
     </div>
 </template>
 
 <script>
   export default {
     name: "love",
-    data (){
-      return{
-        hotList:[
-          {
-            id:'0',
-            hotUrl:'http://touch.piao.qunar.com/touch/detail.htm?id=193401&from=as_recommend_sight',
-            imgUrl:require('@/assets/images/cwzy.png'),
-            name:'采薇庄园滑雪场',
-            money:'30',
-            hotName:'598条评论',
-            style:'84%',
-            area:'榆次区'
-          },
-          {
-            id:'1',
-            hotUrl:'http://touch.piao.qunar.com/touch/detail.htm?id=193401&from=as_recommend_sight',
-            imgUrl:require('@/assets/images/qlgz.jpg'),
-            name:'青龙古镇',
-            money:'3.5',
-            hotName:'609条评论',
-            style:'94%',
-            area:'太原区'
-          },
-          {
-            id:'2',
-            hotUrl:'http://touch.piao.qunar.com/touch/detail.htm?id=193401&from=as_recommend_sight',
-            imgUrl:require('@/assets/images/tyshx.jpg'),
-            name:'台骀山滑世界',
-            money:'54',
-            hotName:'413条评论',
-            style:'62%',
-            area:'太原区'
-          },
-          {
-            id:'3',
-            hotUrl:'http://touch.piao.qunar.com/touch/detail.htm?id=193401&from=as_recommend_sight',
-            imgUrl:require('@/assets/images/cwzy.png'),
-            name:'采薇庄园滑雪场',
-            money:'30',hotName:'609条评论',
-            style:'94%',
-            area:'太原区'
-          },
-          {
-            id:'4',
-            hotUrl:'http://touch.piao.qunar.com/touch/detail.htm?id=193401&from=as_recommend_sight',
-            imgUrl:require('@/assets/images/qlgz.jpg'),
-            name:'青龙古镇',
-            money:'3.5',hotName:'413条评论',
-            style:'62%',
-            area:'太原区'
-          },
-          {
-            id:'5',
-            hotUrl:'http://touch.piao.qunar.com/touch/detail.htm?id=193401&from=as_recommend_sight',
-            imgUrl:require('@/assets/images/tyshx.jpg'),
-            name:'台骀山滑世界',
-            money:'54',
-            hotName:'609条评论',
-            style:'94%',
-            area:'太原区'
-          },
-          {
-            id:'6',
-            hotUrl:'http://touch.piao.qunar.com/touch/detail.htm?id=193401&from=as_recommend_sight',
-            imgUrl:require('@/assets/images/cwzy.png'),
-            name:'采薇庄园滑雪场',
-            money:'30',
-            hotName:'609条评论',
-            style:'94%',
-            area:'太原区'
-          },
-          {
-            id:'7',
-            hotUrl:'http://touch.piao.qunar.com/touch/detail.htm?id=193401&from=as_recommend_sight',
-            imgUrl:require('@/assets/images/qlgz.jpg'),
-            name:'青龙古镇',
-            money:'3.5',
-            hotName:'609条评论',
-            style:'94%',
-            area:'太原区'
-          },
-          {
-            id:'8',
-            hotUrl:'http://touch.piao.qunar.com/touch/detail.htm?id=193401&from=as_recommend_sight',
-            imgUrl:require('@/assets/images/tyshx.jpg'),
-            name:'台骀山滑世界',
-            money:'54',
-            hotName:'229条评论',
-            style:'44%',
-            area:'小店区'
-          },
-        ],
-      }
+    props:{
+      loveList:Array
     }
   }
 </script>
@@ -251,6 +165,15 @@
                 margin-left: .12rem;
             }
 
+        }
+        .more{
+            padding: .2rem 0;
+            line-height: .4rem;
+            text-align: center;
+            a{
+                color: #00afc7;
+                font-size: .28rem;
+            }
         }
     }
 </style>

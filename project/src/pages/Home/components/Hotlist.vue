@@ -14,9 +14,9 @@
         </div>
         <ul class="list">
             <li v-for="item of hotList" :key="item.id">
-                <a :href="item.hotUrl">
+                <a href="">
                     <div class="ph">
-                        <img src="@/assets/images/one.png" alt="">
+                        <!--<img src="./static/images/one.png" alt="">-->
                     </div>
                     <div class="hotimg">
                         <img :src="item.imgUrl" alt="">
@@ -35,75 +35,9 @@
 <script>
   export default {
     name: "hotlist",
-    data (){
-      return{
-        hotList:[
-          {
-            id:'0',
-            hotUrl:'http://touch.piao.qunar.com/touch/detail.htm?id=193401&from=as_recommend_sight',
-            imgUrl:require('@/assets/images/cwzy.png'),
-            name:'采薇庄园滑雪场',
-            money:'30',
-          },
-          {
-            id:'1',
-            hotUrl:'http://touch.piao.qunar.com/touch/detail.htm?id=193401&from=as_recommend_sight',
-            imgUrl:require('@/assets/images/qlgz.jpg'),
-            name:'青龙古镇',
-            money:'3.5',
-          },
-          {
-            id:'2',
-            hotUrl:'http://touch.piao.qunar.com/touch/detail.htm?id=193401&from=as_recommend_sight',
-            imgUrl:require('@/assets/images/tyshx.jpg'),
-            name:'台骀山滑世界',
-            money:'54',
-          },
-          {
-            id:'3',
-            hotUrl:'http://touch.piao.qunar.com/touch/detail.htm?id=193401&from=as_recommend_sight',
-            imgUrl:require('@/assets/images/cwzy.png'),
-            name:'采薇庄园滑雪场',
-            money:'30',
-          },
-          {
-            id:'4',
-            hotUrl:'http://touch.piao.qunar.com/touch/detail.htm?id=193401&from=as_recommend_sight',
-            imgUrl:require('@/assets/images/qlgz.jpg'),
-            name:'青龙古镇',
-            money:'3.5',
-          },
-          {
-            id:'5',
-            hotUrl:'http://touch.piao.qunar.com/touch/detail.htm?id=193401&from=as_recommend_sight',
-            imgUrl:require('@/assets/images/tyshx.jpg'),
-            name:'台骀山滑世界',
-            money:'54',
-          },
-          {
-            id:'6',
-            hotUrl:'http://touch.piao.qunar.com/touch/detail.htm?id=193401&from=as_recommend_sight',
-            imgUrl:require('@/assets/images/cwzy.png'),
-            name:'采薇庄园滑雪场',
-            money:'30',
-          },
-          {
-            id:'7',
-            hotUrl:'http://touch.piao.qunar.com/touch/detail.htm?id=193401&from=as_recommend_sight',
-            imgUrl:require('@/assets/images/qlgz.jpg'),
-            name:'青龙古镇',
-            money:'3.5',
-          },
-          {
-            id:'8',
-            hotUrl:'http://touch.piao.qunar.com/touch/detail.htm?id=193401&from=as_recommend_sight',
-            imgUrl:require('@/assets/images/tyshx.jpg'),
-            name:'台骀山滑世界',
-            money:'54',
-          },
-          ],
-      }
-    }
+    props:{
+      hotList:Array
+    },
   }
 </script>
 
