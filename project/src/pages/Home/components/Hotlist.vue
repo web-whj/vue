@@ -14,9 +14,9 @@
         </div>
         <ul class="list">
             <li v-for="item of hotList" :key="item.id">
-                <a href="">
-                    <div class="ph">
-                        <!--<img src="./static/images/one.png" alt="">-->
+                <router-link :to="'/detail/'+item.id">
+                    <div class="ph" v-if="item.id<3">
+                        <img :src="'./static/images/one'+item.id+'.png'" alt="" >
                     </div>
                     <div class="hotimg">
                         <img :src="item.imgUrl" alt="">
@@ -26,7 +26,7 @@
                         <span>¥<em>{{item.money}}</em></span>
                         <em>起</em>
                     </div>
-                </a>
+                </router-link>
             </li>
         </ul>
     </div>
@@ -37,7 +37,7 @@
     name: "hotlist",
     props:{
       hotList:Array
-    },
+    }
   }
 </script>
 
